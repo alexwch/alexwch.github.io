@@ -489,6 +489,21 @@ h1 {
   margin-bottom: 8px;
 }
 
+.doi {
+  margin-top: 6px;
+  font-size: 0.85rem;
+}
+
+.doi a {
+  color: var(--wood);
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.25s ease;
+}
+
+.doi a:hover {
+  border-bottom-color: var(--wood);
+}
+
 .split {
   display: grid;
   grid-template-columns: 1fr 1fr;
