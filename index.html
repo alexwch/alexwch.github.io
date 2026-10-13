@@ -42,46 +42,37 @@
       </div>
       <div>
         <p class="kicker">City University of Hong Kong</p>
-        <h1>Chong Alex WANG</h1>
+        <h1>Alex WANG</h1>
         <p class="chinese-name">王翀</p>
-        <p class="lede">Professor and Head of the Department of Information Systems. I study how information technologies shape the ways people create, share, and use information in markets, organizations, and everyday life.</p>
+        <p class="lede">I am Alex WANG. My research investigates how modern information technologies shape the ways people create, share, and use information — and how these changes reshape social and economic exchanges. I am currently a Professor at the College of Business, City University of Hong Kong.</p>
         <div class="meta-row">
-          <span>PhD, Information Systems, HKUST</span>
-          <span>MSc Finance, Tsinghua</span>
-          <span>BSc Applied Mathematics, Peking University</span>
+          <span>PhD in Information Systems, Hong Kong University of Science and Technology, 2012</span>
+          <span>MSc in Finance, Tsinghua University, 2006</span>
+          <span>BSc in Applied Mathematics, Peking University, 2004</span>
         </div>
       </div>
     </section>
 
     <section class="wrap section">
       <div class="section-head">
-        <h2>Research Interests</h2>
-        <p>Questions at the meeting point of information economics, digital platforms, and social behavior.</p>
+        <h2>Highlights</h2>
+        <p id="daily-quote" class="daily-quote"></p>
       </div>
-      <div class="interest-grid">
-        <article class="card">
-          <h3>Social media &amp; networks</h3>
-          <p>How online friendship, identity, and influence change ratings, participation, and the public goods of digital communities.</p>
+
+      <div class="highlight-list">
+        <!-- Newest entries at the top. Append new <article> below to add. -->
+        <article class="highlight">
+          <time class="highlight-date" datetime="2026-08">August 2026</time>
+          <div class="highlight-body">
+            <p>Our paper <em>Facade of Trust: The Impact of Adopting AI-Enhanced Profile Pictures on Trust</em> — joint work with Sijia Ma, Tao Lu, and Xiaoquan (Michael) Zhang — has been accepted at <strong>Information Systems Research</strong>. Congratulations to all co-authors, and sincere thanks to the senior editor and review team for their guidance in improving this study.</p>
+          </div>
         </article>
-        <article class="card">
-          <h3>Platforms &amp; markets</h3>
-          <p>Mechanism design in crowdsourcing, crowdfunding, auctions, and live streaming — and how small design choices move large outcomes.</p>
-        </article>
-        <article class="card">
-          <h3>FinTech &amp; data</h3>
-          <p>Financial information technology, cryptocurrency markets, and the economics of data sponsorship, assets, and digital services.</p>
-        </article>
-        <article class="card">
-          <h3>Privacy &amp; governance</h3>
-          <p>Peer privacy, data governance, and the social contracts that make a digital economy livable.</p>
-        </article>
-        <article class="card">
-          <h3>AI &amp; human judgment</h3>
-          <p>How people work with algorithms — from prediction displays to training, aversion, and visual cognition.</p>
-        </article>
-        <article class="card">
-          <h3>Methods</h3>
-          <p>Analytical models, econometrics, field and lab experiments, network analysis, and data mining, used together rather than in isolation.</p>
+        <article class="highlight">
+          <time class="highlight-date" datetime="2025-12">December 2025</time>
+          <div class="highlight-body">
+            <p>Honored to receive the AIS Mid-Career Award from the Association for Information Systems. A deeply meaningful recognition at this stage of the academic journey.</p>
+            <div class="highlight-image"><img src="assets/ais-mid-career-award.png" alt="AIS Mid-Career Award recipients" style="max-width: 420px;"></div>
+          </div>
         </article>
       </div>
     </section>
@@ -89,10 +80,31 @@
 
   <footer class="site-footer">
     <div class="wrap footer-inner">
-      <p>Chong Alex WANG · Academic researcher · Hong Kong</p>
-      <p><a href="mailto:alex.wang@cityu.edu.hk">alex.wang@cityu.edu.hk</a></p>
+      <p>Chong Alex WANG — Professor in Information Systems — Hong Kong, China — Email: <a href="mailto:alex.wang@cityu.edu.hk">alex.wang@cityu.edu.hk</a></p>
+      <p>Last Updated — October 2026</p>
     </div>
   </footer>
   <script src="js/main.js"></script>
+  <script>
+  (function () {
+    // 名言列表：英文 / 中文 / 日文，主题涵盖时间、生命与成就
+    const quotes = [
+      { text: "Life can only be understood backwards; but it must be lived forwards.", author: "Søren Kierkegaard" },
+      { text: "千里之行，始于足下。", author: "老子《道德经》" },
+      { text: "一期一会", author: "千利休" },
+      { text: "The two most powerful warriors are patience and time.", author: "Leo Tolstoy" },
+      { text: "天行健，君子以自强不息。", author: "《周易》" },
+      { text: "七転び八起き", author: "日本のことわざ" },
+      { text: "What we achieve inwardly will change outer reality.", author: "Plutarch" },
+      { text: "路漫漫其修远兮，吾将上下而求索。", author: "屈原《离骚》" },
+      { text: "今日が一番若い日。", author: "日本のことわざ" },
+      { text: "Time is the most valuable thing a man can spend.", author: "Theophrastus" }
+    ];
+    const el = document.getElementById("daily-quote");
+    if (!el) return;
+    const q = quotes[Math.floor(Math.random() * quotes.length)];
+    el.innerHTML = "<em>&ldquo;" + q.text + "&rdquo;</em> — " + q.author;
+  })();
+  </script>
 </body>
 </html>

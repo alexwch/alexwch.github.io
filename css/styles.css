@@ -264,20 +264,14 @@ h1 {
 
 .meta-row {
   display: flex;
-  flex-wrap: wrap;
-  gap: 10px 18px;
-  margin-top: 28px;
+  flex-direction: column;
+  gap: 4px;
+  margin-top: 24px;
   color: var(--muted);
-  font-size: 0.95rem;
+  font-size: 0.92rem;
 }
 
 .meta-row span::before {
-  content: "·";
-  margin-right: 12px;
-  color: var(--clay);
-}
-
-.meta-row span:first-child::before {
   content: none;
   margin: 0;
 }
@@ -304,6 +298,16 @@ h1 {
 .intro {
   color: var(--muted);
   max-width: 40rem;
+}
+
+.daily-quote {
+  font-style: italic;
+  font-size: 1.05rem;
+  line-height: 1.5;
+}
+
+.daily-quote em {
+  color: var(--ink);
 }
 
 .page-hero {
@@ -338,6 +342,72 @@ h1 {
 .paper p,
 .project p {
   color: var(--muted);
+}
+
+/* —— Highlights —— */
+.quote-block {
+  margin-bottom: 36px;
+  padding: 26px 30px;
+  background: var(--cream);
+  border: 1px solid var(--line);
+  border-left: 3px solid var(--wood);
+  border-radius: 0 var(--radius) var(--radius) 0;
+}
+
+.quote-block p {
+  font-size: 1.2rem;
+  font-style: italic;
+  color: var(--ink);
+  line-height: 1.6;
+}
+
+.quote-block cite {
+  display: block;
+  margin-top: 10px;
+  font-size: 0.9rem;
+  color: var(--muted);
+  font-style: normal;
+}
+
+.highlight-list {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.highlight {
+  display: grid;
+  grid-template-columns: 140px 1fr;
+  gap: 28px;
+  padding: 24px 28px;
+  background: var(--cream);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+}
+
+.highlight-date {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--wood);
+  letter-spacing: 0.04em;
+  white-space: nowrap;
+}
+
+.highlight-body p {
+  color: var(--ink);
+  line-height: 1.7;
+}
+
+.highlight-image {
+  margin-top: 14px;
+  border-radius: 14px;
+  overflow: hidden;
+}
+
+.highlight-image img {
+  width: 100%;
+  display: block;
+  border-radius: 14px;
 }
 
 .paper-list,
@@ -464,8 +534,13 @@ h1 {
   .hero,
   .interest-grid,
   .card-grid,
-  .split {
+  .split,
+  .highlight {
     grid-template-columns: 1fr;
+  }
+
+  .highlight {
+    gap: 6px;
   }
 
   .menu-toggle {
