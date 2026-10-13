@@ -382,6 +382,37 @@ h1 {
   margin-bottom: 8px;
 }
 
+.course-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 16px;
+}
+
+.course-links a {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  font-size: 0.9rem;
+  color: var(--wood);
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  padding: 6px 14px;
+  transition: background 0.25s ease, border-color 0.25s ease, transform 0.2s ease;
+}
+
+.course-links a::before {
+  content: "→";
+  color: var(--moss);
+}
+
+.course-links a:hover {
+  background: var(--nav-hover);
+  border-color: var(--wood);
+  transform: translateY(-1px);
+}
+
 .authors {
   font-size: 0.95rem;
   color: var(--wood);
